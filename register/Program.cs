@@ -39,7 +39,7 @@ namespace register
                 if (userExist)
                 {
                     Console.WriteLine("Enter your Password: ");
-                    string passwd = ReadPassword;
+                    string passwd = ReadPassword();
                     if (passwd.CompareTo(registredPasswd) == 0)
                     {
                         Console.WriteLine("Welcome {0}! You are now logged in!", user);
@@ -48,7 +48,7 @@ namespace register
                         bool animalExist = userAnimalDict.TryGetValue(user, out registredAnimal);
                         if (animalExist)
                         {
-                            Console.WriteLine("This is your animal:\{0}", registredAnimal.Show());
+                            Console.WriteLine("This is your animal:\n{0}", registredAnimal.Show());
                         }
                         else
                         {
